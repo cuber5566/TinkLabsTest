@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="photo_width">4</integer>
+    <integer name="photo_height">3</integer>
+
+</resources>

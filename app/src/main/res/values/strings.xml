@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TinkLabsTechnicalCodingTest</string>
+    <string name="no_data">No data .\n Place swipe to refresh.</string>
+
+    <string-array name="category">
+        <item>Top</item>
+        <item>Classical</item>
+        <item>Jazz</item>
+
+    </string-array>
+
+</resources>

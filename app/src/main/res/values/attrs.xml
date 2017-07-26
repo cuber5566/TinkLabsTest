@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- AutoScaleRelativeLayout -->
+    <declare-styleable name="AutoScaleRelativeLayout">
+        <attr name="scaleWidth" format="integer" />
+        <attr name="scaleHeight" format="integer" />
+        <attr name="byHeight" format="boolean" />
+        <attr name="paddingEnable" format="boolean" />
+    </declare-styleable>
+
+    <!-- DotView -->
+    <declare-styleable name="DotView">
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+</resources>
