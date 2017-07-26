@@ -3,7 +3,6 @@ package com.labs.tink.tinklabstechnicalcodingtest.ui.product;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -57,7 +56,6 @@ public class ProductFragment extends BaseFragment implements ProductContract.Vie
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(productAdapter = new ProductAdapter(getContext(), this));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addOnScrollListener(new TopAndBottomScrollListener().onScrollBottom(() -> {
             presenter.getProductList(productList.size());
             progressBar.setVisibility(View.VISIBLE);
@@ -66,6 +64,7 @@ public class ProductFragment extends BaseFragment implements ProductContract.Vie
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(() -> {
             productList.clear();
+            productAdapter.notifyDataSetChanged();
             presenter.getProductList(productList.size());
         });
 
